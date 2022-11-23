@@ -1,0 +1,33 @@
+#if input is not equal to -1
+# request user to enter a number
+# make a list of user inputs
+#find the list of averages
+
+
+#get user input and create a list
+a = numList = []
+
+num = 0
+
+while True:
+    try:
+        num = int(input("Enter an integer: "))
+        numList.append(num)
+    except ValueError:
+        continue
+    if num == -1:
+        print(f'You entered: {num}')
+        break
+      
+#ignore the last input to make the final list
+
+numList = numList[:-1]
+
+print("The entered valid user inputs are: \n", numList)
+
+#find the average of the user input list
+
+average = sum(a)/len(a)
+
+print("Average of user inputs list: ", round(average,3))
+
